@@ -2,7 +2,7 @@ const helper = require('protractor-helper');
 
 const Home = require('../page-objects/home');
 
-describe('Given I\'m  at the home page', () => {
+describe('Given I\'m at the home page', () => {
     let homePage;
 
     beforeAll(() => {
@@ -17,7 +17,7 @@ describe('Given I\'m  at the home page', () => {
         });
 
         describe('When I look to the first card in isolation', () => {
-            it('Then I see an image, a heading, and a anchor', () => {
+            it('Then I see an image, a heading, and an anchor', () => {
                 helper.waitForElementVisibility(homePage.tags.imageOfFirstCard);
                 helper.waitForElementVisibility(homePage.tags.headingOfFirstCard);
                 helper.waitForElementVisibility(homePage.tags.anchorOfFirstCard);
