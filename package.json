@@ -1,15 +1,14 @@
 {
   "name": "protractor",
   "version": "1.0.0",
-  "description": "Projeto de automação de testes com Protractor",
+  "description": "Projeto de automação de testes com o Protractor",
   "main": "index.js",
   "scripts": {
-    "lint": "npx standard",
-    "lint:fix": "npx standard --fix",
-    "pretest": "webdriver-manager update",
+    "pretest:local": "webdriver-manager update",
+    "pretest:github": "webdriver-manager update --versions.chrome 100.0.4896.20",
+    "test": "npm run test:chrome && npm run test:firefox",
     "test:chrome": "protractor configurations/chromeConfig.js",
-    "test:firefox": "protractor configurations/firefoxConfig.js",
-    "test": "npm run test:chrome && npm run test:firefox"
+    "test:firefox": "protractor configurations/firefoxConfig.js"
   },
   "standard": {
     "globals": [
@@ -27,14 +26,11 @@
   "author": "Thiago Nogueira dos Santos",
   "license": "MIT",
   "devDependencies": {
+    "@faker-js/faker": "^6.1.1",
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
     "protractor": "^7.0.0",
-    "protractor-helper": "^4.2.1",
-    "standardjs": "^1.0.0-alpha"
-  },
-  "dependencies": {
-    "@faker-js/faker": "^6.0.0"
+    "protractor-helper": "^4.2.1"
   }
 }

@@ -1,5 +1,4 @@
 const helper = require('protractor-helper');
-
 const Destination = require('../page-objects/destination');
 
 describe('Given I\'m at random destination page', () => {
@@ -8,6 +7,10 @@ describe('Given I\'m at random destination page', () => {
     beforeEach(() => {
         destination = new Destination();
         destination.visit();
+    });
+
+    afterAll(() => {
+        browser.close();
     });
 
     it('Then I see an image, a heading, a paragraph, and an anchor', () => {

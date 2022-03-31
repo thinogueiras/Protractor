@@ -33,6 +33,8 @@
         "guard-for-in": "off",
         "no-restricted-imports": "off",
         "class-methods-use-this": "off",
-        "no-return-assign": "off"  
+        "no-return-assign": "off",
+        "import/no-extraneous-dependencies" : [ "off" ,  { "devDependencies" : false ,  "optionalDependencies" : false ,  "peerDependencies" : false } ],
+        "global-require": "off"
     }
 }
