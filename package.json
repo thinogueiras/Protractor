@@ -4,8 +4,6 @@
   "description": "Projeto de automação de testes com o Protractor",
   "main": "index.js",
   "scripts": {
-    "lint": "npx standard",
-    "lint:fix": "npx standard --fix",
     "pretest:local": "webdriver-manager update",
     "pretest:github": "webdriver-manager update --versions.chrome 100.0.4896.20",
     "test": "npm run test:chrome && npm run test:firefox",
@@ -32,9 +30,7 @@
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
-    "faker": "^5.5.3",
     "protractor": "^7.0.0",
-    "protractor-helper": "^4.2.1",
-    "standardjs": "^1.0.0-alpha"
+    "protractor-helper": "^4.2.1"
   }
 }

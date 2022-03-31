@@ -2,7 +2,7 @@ name: Tests
 on: push
 jobs:
   build:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Project checkout
         uses: actions/checkout@v1
@@ -11,4 +11,4 @@ jobs:
       - name: installation of dependencies
         run: npm ci
       - name: E2E tests
-        run: npm run pretest:github && npm tests
+        run: npm run pretest:github && npm test
