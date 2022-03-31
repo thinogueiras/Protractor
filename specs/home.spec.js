@@ -10,6 +10,10 @@ describe('Given I\'m at the home page', () => {
         homePage.visit();
     });
 
+    afterAll(() => {
+        browser.close();
+    });
+
     describe('And there are five tags in the database', () => {
         it('Then they all render as cards', () => {
             helper.waitForElementVisibility(homePage.tags.cards.last());
