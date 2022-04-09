@@ -8,7 +8,6 @@ class Home {
     }
 
     visit() {
-        browser.driver.manage().window().maximize();
         browser.get('/');
     }
 }

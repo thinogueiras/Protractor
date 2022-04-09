@@ -11,7 +11,6 @@ class EditDestination {
     }
 
     visit() {
-        browser.driver.manage().window().maximize();
         browser.get(`/destinations/${randomNumberBetweenOneAndN(15)}/edit`);
     }
 }

@@ -4,6 +4,7 @@ module.exports = (providerConfig) => {
         specs: ['../specs/*.spec.js'],
         onPrepare: () => {
             browser.waitForAngularEnabled(false);
+            browser.driver.manage().window().maximize();
         },
         jasmineNodeOpts: { random: true },
     };
