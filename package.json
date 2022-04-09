@@ -2,7 +2,6 @@
   "name": "protractor",
   "version": "1.0.0",
   "description": "Projeto de automação de testes com o Protractor",
-  "main": "index.js",
   "scripts": {
     "pretest:local": "webdriver-manager update",
     "pretest:github": "webdriver-manager update --versions.chrome 100.0.4896.20",
@@ -10,21 +9,21 @@
     "test:chrome": "protractor configurations/chromeConfig.js",
     "test:firefox": "protractor configurations/firefoxConfig.js"
   },
-  "standard": {
-    "globals": [
-      "beforeAll",
-      "beforeEach",
-      "browser",
-      "by",
-      "describe",
-      "element",
-      "expect",
-      "it"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thinogueiras/Protractor"
   },
-  "keywords": [],
-  "author": "Thiago Nogueira dos Santos",
+  "keywords": [
+    "protractor",
+    "e2e",
+    "testing"
+  ],
+  "author": "Thiago Nogueira dos Santos - LinkedIn: https://www.linkedin.com/in/thinogueiras/",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thinogueiras/Protractor/issues"
+  },
+  "homepage": "https://github.com/thinogueiras/Protractor#readme",
   "devDependencies": {
     "@faker-js/faker": "^6.1.1",
     "eslint": "^8.11.0",
@@ -32,5 +31,8 @@
     "eslint-plugin-import": "^2.25.4",
     "protractor": "^7.0.0",
     "protractor-helper": "^4.2.1"
+  },
+  "dependencies": {
+    "protractor-html-reporter-2": "^1.0.4"
   }
 }

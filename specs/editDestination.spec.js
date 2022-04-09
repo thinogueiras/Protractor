@@ -1,19 +1,15 @@
 const faker = require('@faker-js/faker');
-const { browser, WebDriver } = require('protractor');
+const { browser } = require('protractor');
 const helper = require('protractor-helper');
 const Destination = require('../page-objects/destination');
 const EditDestination = require('../page-objects/editDestination');
 
-fdescribe('Given I\'m at a random edit destination page', () => {
+describe('Given I\'m at a random edit destination page', () => {
     let editDestination;
 
     beforeEach(() => {
         editDestination = new EditDestination();
         editDestination.visit();
-    });
-
-    afterAll(() => {
-        // browser.close();
     });
 
     it('Then I see an image, and a form to edit the name and description', () => {

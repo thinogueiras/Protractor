@@ -17,10 +17,6 @@ describe('Given I\'m at a random page of the app', () => {
         randomPage.visit();
     });
 
-    afterAll(() => {
-        browser.close();
-    });
-
     it('Then I see an anchor to the home page in the header', () => {
         helper.waitForElementVisibility(randomPage.header.anchorToHome);
     });

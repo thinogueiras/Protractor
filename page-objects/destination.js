@@ -9,7 +9,6 @@ class Destination {
     }
 
     visit() {
-        browser.driver.manage().window().maximize();
         browser.get(`/destinations/${randomNumberBetweenOneAnd(15)}`);
     }
 }

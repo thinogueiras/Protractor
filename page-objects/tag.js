@@ -9,7 +9,6 @@ class Tag {
     }
 
     visit() {
-        browser.driver.manage().window().maximize();
         browser.get(`/tags/${randomNumberBetweenOneAnd(5)}`);
     }
 }
