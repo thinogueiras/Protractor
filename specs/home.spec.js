@@ -1,4 +1,3 @@
-const { browser } = require('protractor');
 const helper = require('protractor-helper');
 
 const Home = require('../page-objects/home');
@@ -6,15 +5,10 @@ const Home = require('../page-objects/home');
 describe('Given I\'m at the home page', () => {
     let homePage;
 
-    beforeAll(() => {
+    beforeEach(() => {
         homePage = new Home();
         homePage.visit();
     });
-
-    // afterAll(() => {
-    //     browser.close();
-    //     browser.quit();
-    // });
 
     describe('And there are five tags in the database', () => {
         it('Then they all render as cards', () => {

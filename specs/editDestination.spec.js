@@ -1,5 +1,5 @@
-const faker = require('@faker-js/faker');
-const { browser } = require('protractor');
+const { faker } = require('@faker-js/faker');
+
 const helper = require('protractor-helper');
 const Destination = require('../page-objects/destination');
 const EditDestination = require('../page-objects/editDestination');
@@ -21,7 +21,7 @@ describe('Given I\'m at a random edit destination page', () => {
         helper.waitForElementVisibility(editDestination.form.updateButton);
     });
 
-    describe('When I submit the form with less than the minimum required chacarters', () => {
+    describe('When I submit the form with less than the minimum required characters', () => {
         beforeEach(() => {
             editDestination.form.submitFormAfterClearingAndFillingItWith('Ab', 'Abcdefghi');
         });
@@ -34,8 +34,8 @@ describe('Given I\'m at a random edit destination page', () => {
 
     describe('When successfully submitting for the form with a new name and description', () => {
         let destinationUrl;
-        const randomUuid = faker.faker.datatype.uuid();
-        const fiveRandomWords = faker.faker.random.words(5);
+        const randomUuid = faker.datatype.uuid();
+        const fiveRandomWords = faker.random.words(5);
 
         beforeEach(() => {
             browser.getCurrentUrl().then((url) => {

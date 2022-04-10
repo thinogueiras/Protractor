@@ -1,4 +1,3 @@
-const { browser } = require('protractor');
 const helper = require('protractor-helper');
 
 const Tag = require('../page-objects/tag');
@@ -6,15 +5,10 @@ const Tag = require('../page-objects/tag');
 describe('Given I\'m at a random tag page', () => {
     let tag;
 
-    beforeAll(() => {
+    beforeEach(() => {
         tag = new Tag();
         tag.visit();
     });
-
-    // afterAll(() => {
-    //     browser.close();
-    //     browser.quit();
-    // });
 
     describe('And there are three destinations for this tag in the database', () => {
         it('Then they all render as cards', () => {
