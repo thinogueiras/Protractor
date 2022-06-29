@@ -6,19 +6,20 @@
     "driver:clean": "webdriver-manager clean",
     "clean:update": "webdriver-manager clean && webdriver-manager update",
     "pretest:local": "webdriver-manager update",
-    "pretest:github": "webdriver-manager update --versions.chrome 100.0.4896.20",
-    "test": "npm run test:chrome && npm run test:firefox",
-    "test:chrome": "protractor configurations/chromeConfig.js",
-    "test:firefox": "protractor configurations/firefoxConfig.js"
+    "pretest:github": "webdriver-manager update --versions.chrome 100.0.4896.20"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/thinogueiras/Protractor"
   },
   "keywords": [
-    "protractor",
+    "Protractor",
+    "Jasmine",
+    "NodeJs",
+    "Javascript",
     "e2e",
-    "testing"
+    "testing",
+    "web-testing"
   ],
   "author": "Thiago Nogueira dos Santos - LinkedIn: https://www.linkedin.com/in/thinogueiras/",
   "license": "MIT",
@@ -35,6 +36,8 @@
   },
   "dependencies": {
     "@faker-js/faker": "^6.1.2",
-    "shelljs": "^0.8.5"
+    "jasmine-spec-reporter": "^7.0.0",
+    "protractor-beautiful-reporter": "^1.3.6",
+    "protractor-jasmine2-html-reporter": "^0.0.7"
   }
 }
