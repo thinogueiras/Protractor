@@ -1,7 +1,7 @@
 name: Protractor e2e Tests
 on: 
   push:
-    branches: [ master ]
+    branches: [ master, project-refactor ]
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -6,7 +6,8 @@
     "driver:clean": "webdriver-manager clean",
     "clean:update": "webdriver-manager clean && webdriver-manager update",
     "pretest:local": "webdriver-manager update",
-    "pretest:github": "webdriver-manager update --versions.chrome 100.0.4896.20"
+    "pretest:github": "webdriver-manager update --versions.chrome 103.0.5060.53",
+    "test": "protractor protractor.conf.js"
   },
   "repository": {
     "type": "git",

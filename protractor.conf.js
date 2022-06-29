@@ -30,7 +30,6 @@ config.specs = specs;
 config.capabilities = protractorBrowserConfig.chrome;
 
 config.onPrepare = () => {
-    browser.driver.manage().window().maximize();
     browser.waitForAngularEnabled(false);
     browser.driver.get(config.baseUrl);
     browser.manage().timeouts().implicitlyWait(0);

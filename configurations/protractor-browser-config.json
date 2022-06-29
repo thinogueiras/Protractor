@@ -3,7 +3,8 @@
         "browserName": "chrome",
         "chromeOptions": {
             "args": [
-                "--start-maximized"
+                "--start-maximized",
+                "--headless"
             ],
             "prefs": {
                 "profile.managed_default_content_settings.notifications": 1,
