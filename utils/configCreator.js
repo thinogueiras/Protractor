@@ -1,5 +1,3 @@
-const shell = require('shelljs');
-
 module.exports = (providerConfig) => {
     const defaultConfig = {
         baseUrl: 'https://lit-chamber-61567.herokuapp.com',
