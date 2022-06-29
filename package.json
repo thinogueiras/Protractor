@@ -4,7 +4,7 @@
   "description": "Projeto de automação de testes com o Protractor",
   "scripts": {
     "pretest:local": "webdriver-manager update",
-    "pretest:github": "webdriver-manager update --versions.chrome 100.0.4896.20",
+    "pretest:github": "webdriver-manager update --versions.chrome 103.0.5060.53",
     "test": "npm run test:chrome && npm run test:firefox",
     "test:chrome": "protractor configurations/chromeConfig.js",
     "test:firefox": "protractor configurations/firefoxConfig.js"
@@ -14,7 +14,10 @@
     "url": "https://github.com/thinogueiras/Protractor"
   },
   "keywords": [
-    "protractor",
+    "Protractor",
+    "Jasmine",
+    "NodeJs",
+    "Javascript",
     "e2e",
     "testing"
   ],

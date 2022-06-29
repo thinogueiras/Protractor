@@ -1,5 +1,0 @@
-ddescribe para executar apenas este describe de toda a suíte de testes
-
-iit or fit para executar apenas este teste
-
-xit para realizar um skip do teste

@@ -18,4 +18,4 @@ jobs:
       - name: installation of dependencies
         run: npm ci
       - name: E2E tests
-        run: npm run pretest:github && npm test
+        run: npm run pretest:github && npm run test:chrome
