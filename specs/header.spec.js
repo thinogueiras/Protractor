@@ -1,10 +1,10 @@
 const helper = require('protractor-helper');
 
 const pages = [
-    require('../page-objects/home'),
-    require('../page-objects/tag'),
-    require('../page-objects/destination'),
-    require('../page-objects/editDestination'),
+    require('../pages/home.page'),
+    require('../pages/tag.page'),
+    require('../pages/destination.page'),
+    require('../pages/editDestination.page'),
 ];
 
 const pageSorter = require('../utils/pageSorter');
@@ -13,7 +13,7 @@ describe('Given I\'m at a random page of the app', () => {
     let randomPage;
 
     beforeEach(() => {
-        randomPage = new pages[pageSorter(pages)]();
+        randomPage = pages[pageSorter(pages)];
         randomPage.visit();
     });
 

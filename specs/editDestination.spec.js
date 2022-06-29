@@ -1,34 +1,31 @@
 const { faker } = require('@faker-js/faker');
 
 const helper = require('protractor-helper');
-const Destination = require('../page-objects/destination');
-const EditDestination = require('../page-objects/editDestination');
+const DestinationPage = require('../pages/destination.page');
+const EditDestinationPage = require('../pages/editDestination.page');
 
 describe('Given I\'m at a random edit destination page', () => {
-    let editDestination;
-
     beforeEach(() => {
-        editDestination = new EditDestination();
-        editDestination.visit();
+        EditDestinationPage.visit();
     });
 
     it('Then I see an image, and a form to edit the name and description', () => {
-        helper.waitForElementVisibility(editDestination.self.image);
-        helper.waitForElementVisibility(editDestination.form.nameLabel);
-        helper.waitForElementVisibility(editDestination.form.nameInput);
-        helper.waitForElementVisibility(editDestination.form.descriptionLabel);
-        helper.waitForElementVisibility(editDestination.form.descriptionInput);
-        helper.waitForElementVisibility(editDestination.form.updateButton);
+        helper.waitForElementVisibility(EditDestinationPage.self.image);
+        helper.waitForElementVisibility(EditDestinationPage.form.nameLabel);
+        helper.waitForElementVisibility(EditDestinationPage.form.nameInput);
+        helper.waitForElementVisibility(EditDestinationPage.form.descriptionLabel);
+        helper.waitForElementVisibility(EditDestinationPage.form.descriptionInput);
+        helper.waitForElementVisibility(EditDestinationPage.form.updateButton);
     });
 
     describe('When I submit the form with less than the minimum required characters', () => {
         beforeEach(() => {
-            editDestination.form.submitFormAfterClearingAndFillingItWith('Ab', 'Abcdefghi');
+            EditDestinationPage.form.submitFormAfterClearingAndFillingItWith('Ab', 'Abcdefghi');
         });
 
         it('Then both input fields are wrapped in a .field_with_erros div', () => {
-            helper.waitForElementVisibility(editDestination.form.nameInputWithError);
-            helper.waitForElementVisibility(editDestination.form.descriptionInputWithError);
+            helper.waitForElementVisibility(EditDestinationPage.form.nameInputWithError);
+            helper.waitForElementVisibility(EditDestinationPage.form.descriptionInputWithError);
         });
     });
 
@@ -42,14 +39,13 @@ describe('Given I\'m at a random edit destination page', () => {
                 destinationUrl = url.replace('/edit', '');
             });
 
-            editDestination.form.submitFormAfterClearingAndFillingItWith(randomUuid, fiveRandomWords);
+            EditDestinationPage.form.submitFormAfterClearingAndFillingItWith(randomUuid, fiveRandomWords);
         });
 
         it('Then I\'m redirected to the destination view page, and I see the updated info', () => {
-            const destination = new Destination();
             helper.waitForUrlToBeEqualToExpectedUrl(destinationUrl);
-            helper.waitForTextToBePresentInElement(destination.self.heading, randomUuid);
-            helper.waitForTextToBePresentInElement(destination.self.paragraph, fiveRandomWords);
+            helper.waitForTextToBePresentInElement(DestinationPage.self.heading, randomUuid);
+            helper.waitForTextToBePresentInElement(DestinationPage.self.paragraph, fiveRandomWords);
         });
     });
 });
