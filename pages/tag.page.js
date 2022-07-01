@@ -1,6 +1,6 @@
-const randomNumberBetweenOneAnd = require('../utils/randomNumberBetweenOneAndN');
-const HeaderComponent = require('./components/header');
-const DestinationsComponent = require('./components/destinations');
+const randomNumberBetweenOneAnd = require('../functions/randomNumberBetweenOneAndN');
+const HeaderComponent = require('../components/header');
+const DestinationsComponent = require('../components/destinations');
 
 class TagPage {
     constructor() {

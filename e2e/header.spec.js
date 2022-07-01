@@ -7,7 +7,7 @@ const pages = [
     require('../pages/editDestination.page'),
 ];
 
-const pageSorter = require('../utils/pageSorter');
+const pageSorter = require('../functions/pageSorter');
 
 describe('Given I\'m at a random page of the app', () => {
     let randomPage;

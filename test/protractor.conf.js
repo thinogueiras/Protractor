@@ -1,7 +1,7 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 const HtmlReporter = require('protractor-beautiful-reporter');
 
-const protractorBrowserConfig = require('./configurations/protractor-browser-config.json');
+const protractorBrowserConfig = require('../config/protractor-browser-config.json');
 
 const config = { jasmineNodeOpts: {} };
 const timeout = 15000;
@@ -23,11 +23,11 @@ config.jasmineNodeOpts = {
     realtimeFailure: true,
 };
 
-const specs = ['./specs/*.js'];
+const specs = ['../e2e/*.spec.js'];
 
 config.specs = specs;
 
-config.capabilities = protractorBrowserConfig.chrome;
+config.capabilities = protractorBrowserConfig.headlessChrome;
 
 config.onPrepare = () => {
     browser.waitForAngularEnabled(false);

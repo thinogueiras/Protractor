@@ -1,5 +1,5 @@
-const TagsComponent = require('./components/tags');
-const HeaderComponent = require('./components/header');
+const TagsComponent = require('../components/tags');
+const HeaderComponent = require('../components/header');
 
 class HomePage {
     constructor() {

@@ -24,8 +24,7 @@
         "browserName": "chrome",
         "chromeOptions": {
             "args": [
-                "--headless",
-                "--start-maximized"
+                "--headless"
             ]
         }
     },
