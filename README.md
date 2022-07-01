@@ -1,6 +1,6 @@
 # Automação de testes com Protractor
 
-[![Protractor E2E Tests](https://github.com/thinogueiras/Protractor/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/thinogueiras/Protractor/actions/workflows/continuous-integration.yml)
+[![Protractor e2e Tests](https://github.com/thinogueiras/Protractor/actions/workflows/continuous-integration.yml/badge.svg?branch=master)](https://github.com/thinogueiras/Protractor/actions/workflows/continuous-integration.yml)
 
 Projeto realizado com o curso da Escola TAT.
 
